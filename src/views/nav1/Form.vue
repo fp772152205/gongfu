@@ -38,11 +38,18 @@
 		<el-form-item label="活动形式">
 			<el-input type="textarea" v-model="form.desc"></el-input>
 		</el-form-item>
+			<div>qsqkowdjwefwijwoijdiwqjdijidhqiwdhi	heii哦亲死都确定i去我都黄琦雯哦切i去哦我的武器哦亲我都劝我当今哦点击确定哦我id系我的
+		我拍的温泉酒店家穷我的系我去的i去我觉得i去哦我的机器我就qwddqwdqd
+		的武器pop顶级球队去哦我就都去我觉得哦脾气极端哦亲我觉得排气温度就
+		忘记哦我进去的我的就去破解迫切我就去评价琼海日日日 rfiowa欸亲哦好去哦i和<h1>的娃娃认为服务单位的为额few认为</h1>
+	</div>
 		<el-form-item>
 			<el-button type="primary">立即创建</el-button>
 			<el-button @click.native.prevent>取消</el-button>
 		</el-form-item>
+
 	</el-form>
+	
 </template>
 
 <script>

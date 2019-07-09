@@ -6,11 +6,11 @@ import * as getters from './getters'
 Vue.use(Vuex)
 
 
-
 // 应用初始状态
 const state = {
-    user: JSON.parse(localStorage.getItem('user')) || null,
-    token: localStorage.getItem('token') || '',
+
+    user: JSON.parse(sessionStorage.getItem('user')) || null,
+    token: sessionStorage.getItem('token') || '',
     router: [],
 }
 
@@ -24,10 +24,10 @@ const mutations = {
     },
     // 用户信息
     user(state, user) {
-        var _user = localStorage.getItem('user');
+        var _user = sessionStorage.getItem('user');
         if (!_user) {
-            localStorage.setItem("user", JSON.stringify(user));
-            _user = JSON.parse(localStorage.getItem('user'));
+            sessionStorage.setItem("user", JSON.stringify(user));
+            _user = JSON.parse(sessionStorage.getItem('user'));
         } else {
             _user = JSON.parse(_user);
         }
@@ -35,7 +35,7 @@ const mutations = {
     },
     // 用户token
     token(state, token) {
-        localStorage.setItem("token", token);
+        sessionStorage.setItem("token", token);
         state.token = token;
     },
     // 用户权限路由
@@ -46,7 +46,7 @@ const mutations = {
     logout(state) {
         state.token = '';
         state.user = null;
-        localStorage.clear();
+        sessionStorage.clear();
 
     },
 

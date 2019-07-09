@@ -1,7 +1,7 @@
 //test
-export const increment = ({commit}) => {
+export const increment = ({ commit }) => {
     commit('INCREMENT')
 }
-export const decrement = ({commit}) => {
+export const decrement = ({ commit }) => {
     commit('DECREMENT')
 }

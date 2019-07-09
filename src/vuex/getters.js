@@ -5,13 +5,12 @@ export const token = state => {
 }
 
 export const user = state => {
-    debugger
-    if (state.user && Object.keys(state.user).length > 0) {
+    if (state.user) {
         return state.user;
     } else {
 
         var user = null;
-        var u = JSON.parse(localStorage.getItem("user"));
+        var u = JSON.parse(sessionStorage.getItem("user"));
         if (u) {
             user = u;
         }
