@@ -5,26 +5,22 @@
         "children": [{
                 "title": "组织机构",
                 "icon": "layui-icon-login-wechat",
-                "address": "/System/Organize/Index",
+                "address": "/system/organize",
                 "IsMenu": true,
                 "meta": {
                     "btnPermissions": ["新增", "修改", "删除"]
                 }
-
-
-
-
             },
             {
                 "title": "系统日志",
                 "icon": "layui-icon-notice",
-                "address": "/System/Log/Index",
+                "address": "/system/log",
                 "isMenu": true
             },
             {
                 "title": "模块权限",
                 "icon": "layui-icon-notice",
-                "address": "/System/Module/Index",
+                "address": "/system/module",
                 "isMenu": true,
                 "meta": {
                     "btnPermissions": ["新增", "删除"]
@@ -39,7 +35,7 @@
         "children": [{
                 "title": "用户信息",
                 "icon": "layui-icon-notice",
-                "address": "/System/User/Index",
+                "address": "/user/list",
                 "isMenu": true,
                 "meta": {
                     "btnPermissions": ["新增", "删除"]
@@ -49,7 +45,7 @@
             {
                 "title": "角色信息",
                 "icon": "layui-icon-notice",
-                "address": "/System/Role/Index",
+                "address": "/user/role",
                 "isMenu": true,
                 "meta": {
                     "btnPermissions": ["新增", "删除"]
@@ -65,7 +61,7 @@
                 "title": "项目信息",
                 "isMenu": true,
                 "icon": "layui-icon-face-smile-b",
-                "address": "/Project/Index",
+                "address": "/project/project",
                 "meta": {
                     "btnPermissions": ["新增", "删除"]
                 }
@@ -74,7 +70,7 @@
                 "title": "项目授权",
                 "isMenu": true,
                 "icon": "",
-                "address": "/ProjectAuth/Index",
+                "address": "/project/auth",
                 "meta": {
                     "btnPermissions": ["新增", "删除"]
                 }
