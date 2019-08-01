@@ -1,5 +1,5 @@
 <template>
-    <div>模块权限</div>
+    <div>费用分析</div>
 </template>
 
 <style lang="scss" scoped>

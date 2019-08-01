@@ -121,7 +121,10 @@ export default {
      if(user){
 this.sysUserName=user.realname?user.realname:"系统管理员";
 this.sysUserAvatar=user.headicon?user.headicon: require("../assets/images/user.png");
-    }; 
+    };
+
+
+     
   },
   created() {
     if (document.body.clientWidth < 1500) {

@@ -25,11 +25,6 @@ el-menu-item {
     background-color: #f4d0b9;
 }
 
-
-/* .el-submenu.is-active .el-submenu__title {
-    color: #ef640d;
-} */
-
 .el-submenu__title:hover {
     background-color: #f4d0b9;
 }
@@ -48,7 +43,7 @@ el-menu-item {
 .el-menu-item.is-active {
     color: #ef640d;
     background-color: #f4d0b9;
-    border-right: 3px solid #ef640d;
+    border-right: 8px solid #ef640d;
 }
 
 .el-submenu .el-menu {
@@ -120,3 +115,19 @@ el-menu-item {
 
 
 /********/
+
+.container {
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.router-link-active {
+    text-decoration: none;
+}

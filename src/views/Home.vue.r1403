@@ -4,13 +4,14 @@
     <div class="header">
       <!-- logo -->
       <div class="logo">
-        <img src="../assets/images/logo_home.png" @click="refreshPage" />
+        <img :src="logo"  @click="refreshPage" />
       </div>
       <div class="header-right">
         <div class="header-user-con">
           <!-- 用户头像 -->
           <div class="user-avator">
-            <img :src="sysUserAvatar" />
+            <!-- <img :src="sysUserAvatar" /> -->
+            <i class="fa fa-user-circle fa-lg"  aria-hidden="true"></i>
           </div>
           <!-- 用户名下拉菜单 -->
           <el-dropdown class="user-name" trigger="click" @command="handleCommand">
@@ -19,12 +20,12 @@
               <i class="el-icon-caret-bottom"></i>
             </span>
             <el-dropdown-menu slot="dropdown">
-               <router-link to="/user/profile">
-              <el-dropdown-item>个人信息</el-dropdown-item>
-            </router-link>
-            <router-link to="/user/changepwd">
-              <el-dropdown-item>修改密码</el-dropdown-item>
-            </router-link>
+              <router-link to="/user/profile">
+                <el-dropdown-item>个人信息</el-dropdown-item>
+              </router-link>
+              <router-link to="/user/changepwd">
+                <el-dropdown-item>修改密码</el-dropdown-item>
+              </router-link>
               <el-dropdown-item divided command="loginout">退出登录</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
@@ -82,7 +83,8 @@ export default {
       isRouterAlive: true, //是否加载组件
       collapse: false,
       sysUserName: "",
-      sysUserAvatar: ""
+      // // sysUserAvatar: ""
+    logo:require("../assets/images/logo_home.png")
     };
   },
   methods: {
@@ -116,22 +118,30 @@ export default {
       bus.$emit("collapse", this.collapse);
     }
   },
-  mounted(){
-     let user =this.$store.getters.user;
-     if(user){
-this.sysUserName=user.realname?user.realname:"系统管理员";
-this.sysUserAvatar=user.headicon?user.headicon: require("../assets/images/user.png");
-    }; 
+  mounted() {
+    let user = this.$store.getters.user;
+    if (user) {
+      this.sysUserName = user.realname ? user.realname : "系统管理员";
+      // this.sysUserAvatar = user.headicon
+      //   ? user.headicon
+      //   : require("../assets/images/user.png");
+    }
   },
   created() {
     if (document.body.clientWidth < 1500) {
       this.collapseChage();
     }
+    // if (document.body.clientWidth < 500) {
+    //   this.logo=require("../assets/images/icon_logo.png")
+    // }
     // this.$router.push("/main");
   }
 };
 </script>
 <style scoped lang="scss">
+.wrapper{
+  min-width:900px;
+}
 .header {
   position: relative;
   box-sizing: border-box;
@@ -157,7 +167,7 @@ this.sysUserAvatar=user.headicon?user.headicon: require("../assets/images/user.p
   width: 250px;
   line-height: 160px;
   padding-left: 10px;
-  cursor:pointer;
+  cursor: pointer;
 }
 .header-right {
   float: right;
@@ -200,6 +210,7 @@ this.sysUserAvatar=user.headicon?user.headicon: require("../assets/images/user.p
 }
 .user-avator {
   margin-left: 20px;
+  color: #fff;
 }
 .user-avator img {
   display: block;
@@ -231,8 +242,8 @@ this.sysUserAvatar=user.headicon?user.headicon: require("../assets/images/user.p
     padding-left: 25px;
     padding-bottom: 20px;
     font-size: 1.5em;
-    i{
-     cursor: pointer;
+    i {
+      cursor: pointer;
     }
     // background-color: #ffffff;
   }
@@ -267,6 +278,7 @@ this.sysUserAvatar=user.headicon?user.headicon: require("../assets/images/user.p
     top: 0px;
     bottom: 0px;
     margin-bottom: 50px;
+           min-width: 650px;
     /// -webkit-transition: left .3s ease-in-out;
     // transition: left .3s ease-in-out;
     // padding: 20px;
@@ -301,7 +313,7 @@ this.sysUserAvatar=user.headicon?user.headicon: require("../assets/images/user.p
         text-align: center;
         padding-top: 12px;
         color: #fbb22f;
-        cursor:pointer;
+        cursor: pointer;
       }
       .breadcrumb-inner {
         position: absolute;
@@ -318,6 +330,7 @@ this.sysUserAvatar=user.headicon?user.headicon: require("../assets/images/user.p
       // background-color: #ffffff;
       // width: auto;
       height: 100%;
+
       overflow-y: auto;
       // -webkit-box-sizing: border-box;
       // box-sizing: border-box;

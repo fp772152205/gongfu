@@ -1,5 +1,5 @@
 <template>
-    <div>模块权限</div>
+    <div>银行现金帐</div>
 </template>
 
 <style lang="scss" scoped>
